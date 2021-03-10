@@ -91,23 +91,26 @@ export default class App extends React.Component {
 		
 		//{this.displayAlert}				
 		
+		//Get Total messagecount
 		CleverTap.getInboxMessageCount((err, res) => {
 				console.log('Total Messages: ', res, err);
 			});
+		
+		//Get the count of unread messages
 		CleverTap.getInboxMessageUnreadCount((err, res) => {
 				console.log('Unread Messages: ', res, err);
 			});
 		
-
+		//Get All Inbox Messages
 		CleverTap.getAllInboxMessages((err, res) => {
 				console.log('All Inbox Messages: ', res, err);
 			 });
 		
-
+		//get all Inbox unread messages
 		CleverTap.getUnreadInboxMessages((err, res) => {
 				 console.log('Unread Inbox Messages: ', res, err);
 			 });
-		
+		//Get inbox Id
 		CleverTap.getInboxMessageForId('Message Id',(err, res) => {
             console.log("marking message read = "+res);
         });
@@ -115,12 +118,16 @@ export default class App extends React.Component {
         CleverTap.deleteInboxMessageForId('Message Id');
         CleverTap.markReadInboxMessageForId('Message Id');
         CleverTap.pushInboxNotificationViewedEventForId('Message Id');
-        CleverTap.pushInboxNotificationClickedEventForId('Message Id');			
+        CleverTap.pushInboxNotificationClickedEventForId('Message Id');		
 
+		//Get CleverTap Id
+		CleverTap.profileGetCleverTapID((err, res) => {
+            console.log('CleverTapID', res, err);
+        });
 		
 	}
 	 
-	 componentWillUnmount() {
+		componentWillUnmount() {
 		 CleverTap.removeListener(CleverTap.CleverTapProfileSync);
 		 
 	 }
