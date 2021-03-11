@@ -73,7 +73,7 @@ export default class App extends React.Component {
         
 		//Removing a Value from the Multiple Values
 		CleverTap.profileRemoveMultiValueForKey('b', 'letters');
-       
+
 		//Removing Multiple Values
 		CleverTap.profileRemoveMultiValuesForKey(['a', 'c'], 'letters');
 		
@@ -144,8 +144,15 @@ export default class App extends React.Component {
             console.log('CleverTapAttributionIdentifier', res, err);
         });
 		
+		//Get Display Unit For ID
+		CleverTap.getDisplayUnitForId('Unit Id', (err, res) => {
+             console.log('Get Display Unit for Id:', res, err);
+        });
 		
-		
+		//Get ALL Display Units
+		CleverTap.getAllDisplayUnits((err, res) => {
+             console.log('All Display Units: ', res, err);
+        });
 	}
 	 
 		componentWillUnmount() {
