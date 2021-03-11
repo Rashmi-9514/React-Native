@@ -93,7 +93,7 @@ export default class App extends React.Component {
 		//CleverTap.createNotificationChannelGroup(String groupId, String groupName)
 		
 		//Delete a group notification channel
-		CleverTap.deleteNotificationChannelGroup(String groupId)
+		//CleverTap.deleteNotificationChannelGroup(String groupId)
 		 
 		//initialize the App Inbox
         CleverTap.initializeInbox();  
