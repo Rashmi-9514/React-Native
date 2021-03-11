@@ -44,6 +44,7 @@ export default class App extends React.Component {
 		
 		//Setting up a Push Notification
 		CleverTap.setPushToken("111056687894", CleverTap.FCM);
+		
 			
 		//Recording an Event	
 		CleverTap.recordEvent('testEvent');
@@ -51,6 +52,7 @@ export default class App extends React.Component {
 		CleverTap.recordEvent('testEventWithProps', {'foo': 'bar'});
         if (Platform.OS === 'android') {
              CleverTap.setPushToken("111056687894", CleverTap.FCM);
+			 
         }
     
 		//On user Login 
@@ -136,6 +138,13 @@ export default class App extends React.Component {
 		CleverTap.profileGetCleverTapID((err, res) => {
             console.log('CleverTapID', res, err);
         });
+		
+		//Default Instance
+		CleverTap.profileGetCleverTapAttributionIdentifier((err, res) => {
+            console.log('CleverTapAttributionIdentifier', res, err);
+        });
+		
+		
 		
 	}
 	 
