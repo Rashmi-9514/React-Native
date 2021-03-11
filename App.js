@@ -89,7 +89,7 @@ export default class App extends React.Component {
 		CleverTap.recordChargedEvent({'totalValue': 20, 'category': 'books'}, [{'title': 'book1'}, {'title': 'book2'}, {'title': 'book3'}]);
 	
 		//Creating Notification Channel
-		 CleverTap.createNotificationChannel("RNTesting", "React Native Testing", "React Native Testing", 4, true);
+		 CleverTap.createNotificationChannel("CtRNS", "Clever Tap React Native Testing", "CT React Native Testing", 1, true);
 		 
 		//Delete Notification Channel
 		CleverTap.deleteNotificationChannel("RNTesting")

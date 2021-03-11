@@ -24,8 +24,8 @@
         </intent-filter>
 	 </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-	    <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="TEST-RZ7-Z94-K95Z" />
-        <meta-data android:name="CLEVERTAP_TOKEN" android:value="TEST-4c1-a12" />
+	    <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="88R-R54-5Z6Z" />
+        <meta-data android:name="CLEVERTAP_TOKEN" android:value="XXXXXX" />
         <meta-data android:name="CLEVERTAP_REGION" android:value=" " />
         <receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver" />
 		<service android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService">
