@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "111056687894",
-    "project_id": "react-native-b7713",
-    "storage_bucket": "react-native-b7713.appspot.com"
+    "project_number": "647245146326",
+    "project_id": "awesometsproject-d46bf",
+    "storage_bucket": "awesometsproject-d46bf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:111056687894:android:3d4d7ff3fc951c4bd83637",
+        "mobilesdk_app_id": "1:647245146326:android:dd1dbb4b47c675d4be4177",
         "android_client_info": {
           "package_name": "com.awesometsproject"
         }
       },
       "oauth_client": [
         {
-          "client_id": "111056687894-0c22kl7gv0u0n4cj5oipdr9eak3ka7os.apps.googleusercontent.com",
+          "client_id": "647245146326-gdtr7egk89ursk295jjes4iu60homdv4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAp-dV4Oqx2PSuPj008NBu8a82UEF3tBX4"
+          "current_key": "AIzaSyCQxTgtxWbRHGYExTkdC8mTW6Er_2unioQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "111056687894-0c22kl7gv0u0n4cj5oipdr9eak3ka7os.apps.googleusercontent.com",
+              "client_id": "647245146326-gdtr7egk89ursk295jjes4iu60homdv4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
