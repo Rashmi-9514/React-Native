@@ -76,7 +76,7 @@ export default class App extends React.Component {
 		CleverTap.profileRemoveMultiValuesForKey(['a', 'c'], 'letters');
 		
 		//Removing Value for key
-		CleverTap.profileRemoveValueForKey("letters");
+		//CleverTap.profileRemoveValueForKey("letters");
 		
 		CleverTap.profileAddMultiValuesForKey(["V1","V2"],"Values");
         
