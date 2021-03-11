@@ -86,6 +86,9 @@ export default class App extends React.Component {
 		//Creating Notification Channel
 		 CleverTap.createNotificationChannel("RNTesting", "React Native Testing", "React Native Testing", 4, true);
 		 
+		//Delete Notification Channel
+		CleverTap.deleteNotificationChannel("RNTesting")
+		 
 		//initialize the App Inbox
         CleverTap.initializeInbox();  
 		
