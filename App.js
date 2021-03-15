@@ -9,6 +9,7 @@ import {
   Button,
   Alert} from 'react-native';
 
+
 import {
   Header,
   LearnMoreLinks,
@@ -101,7 +102,7 @@ export default class App extends React.Component {
 		//CleverTap.deleteNotificationChannelGroup(String groupId)
 		 
 		//initialize the App Inbox
-        CleverTap.initializeInbox();  
+		CleverTap.initializeInbox();  
 		
 		//{this.displayAlert}				
 		
@@ -153,6 +154,57 @@ export default class App extends React.Component {
 		CleverTap.getAllDisplayUnits((err, res) => {
              console.log('All Display Units: ', res, err);
         });
+		
+		//Product config:
+		CleverTap.setDefaultsMap({'text_color': 'red', 'msg_count': 100, 'price': 100.50, 'is_shown': true, 'json': '{"key":"val"}'});
+		
+		//Activate
+		CleverTap.activate();
+		
+		//Fetch
+		CleverTap.fetch();
+		
+		//Fetch And Activate
+		CleverTap.fetchAndActivate();
+		
+		//Reset Product config
+		CleverTap.resetProductConfig();
+		
+		//Fetch Minimum Time Interval
+		CleverTap.fetchWithMinimumIntervalInSeconds(60);
+		
+		//Set Minimum Interval
+		CleverTap.setMinimumFetchIntervalInSeconds(60);
+		
+		//get Last Fetch TimeStamp In Milliseconds
+		 CleverTap.getLastFetchTimeStampInMillis((err, res) => {
+               console.log('LastFetchTimeStampInMillis in string: ', res, err);
+          });
+		  
+		//Product configs
+		//String
+		CleverTap.getProductConfigString('text_color', (err, res) => {
+              console.log('PC text_color val in string :', res, err);
+         });
+		CleverTap.getProductConfigString('json', (err, res) => {
+              console.log('PC json val in string :', res, err);
+         });
+		
+		//Boolean
+		CleverTap.getProductConfigBoolean('is_shown', (err, res) => {
+              console.log('PC is_shown val in boolean :', res, err);
+         });
+		
+		//Number
+		CleverTap.getNumber('msg_count', (err, res) => {
+              console.log('PC msg_count val in number :', res, err);
+         });
+		CleverTap.getNumber('price', (err, res) => {
+              console.log('PC price val in number :', res, err);
+         });
+		
+
+		
 	}
 	 
 		componentWillUnmount() {
