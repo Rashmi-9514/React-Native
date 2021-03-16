@@ -212,7 +212,11 @@ export default class App extends React.Component {
 		CleverTap.getNumber('price', (err, res) => {
               console.log('PC price val in number :', res, err);
          });
-		
+
+        //Feature flag
+        CleverTap.getFeatureFlag('is_dark_mode', false, (err, res) => {
+                      console.log('FF is_dark_mode val in boolean :', res, err);
+             });
 
 		
 	}
