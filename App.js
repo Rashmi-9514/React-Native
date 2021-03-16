@@ -139,7 +139,17 @@ export default class App extends React.Component {
 		CleverTap.profileGetCleverTapID((err, res) => {
             console.log('CleverTapID', res, err);
         });
-		
+
+		// Enable Personalization
+		CleverTap.enablePersonalization();
+
+        //Profile Property
+        CleverTap.profileGetProperty('Name', (err, res) => {
+            console.log('CleverTap Profile Name: ', res, err);
+            });
+
+
+
 		//Default Instance
 		CleverTap.profileGetCleverTapAttributionIdentifier((err, res) => {
             console.log('CleverTapAttributionIdentifier', res, err);
