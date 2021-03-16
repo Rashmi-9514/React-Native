@@ -44,7 +44,7 @@ export default class App extends React.Component {
 		CleverTap.setDebugLevel(10);
 		
 		//Setting up a Push Notification
-		CleverTap.setPushToken("fcm:647245146326", CleverTap.FCM);
+		//CleverTap.setPushToken("", CleverTap.FCM);
 		
 			
 		//Recording an Event	
@@ -52,9 +52,9 @@ export default class App extends React.Component {
         
 		CleverTap.recordEvent('testEventWithProps', {'foo': 'bar'});
         if (Platform.OS === 'android') {
-             CleverTap.setPushToken("fcm:647245146326", CleverTap.FCM);
-			 
-        }
+             CleverTap.setPushToken("c8jR0POtQrGQkiCvTT_WBr:APA91bEHs7MUwrczT0bMjQfr6ByPrUKgcvPuMRDBzzuLegHsJFOx1dHvalN9r0ShkNiFwuXVli9Cct_Pdr2hovQp9Mq5r72T-p0bwDUWnoDPrzs8WOGl2tTAv711JztY6oAFsmLPB6Eq", CleverTap.FCM);
+
+		}
     
 		//On user Login 
 		CleverTap.onUserLogin({'Name': 'v', 'Identity': '45671890', 'Email': 'v@gmail.com', 'custom1': 13});
@@ -127,43 +127,43 @@ export default class App extends React.Component {
 			 });
 		//Get inbox Id
 		CleverTap.getInboxMessageForId('Message Id',(err, res) => {
-            console.log("marking message read = "+res);
-        });
+            		console.log("marking message read = "+res);
+        	});
 
-        CleverTap.deleteInboxMessageForId('Message Id');
-        CleverTap.markReadInboxMessageForId('Message Id');
-        CleverTap.pushInboxNotificationViewedEventForId('Message Id');
-        CleverTap.pushInboxNotificationClickedEventForId('Message Id');		
+        	CleverTap.deleteInboxMessageForId('Message Id');
+        	CleverTap.markReadInboxMessageForId('Message Id');
+        	CleverTap.pushInboxNotificationViewedEventForId('Message Id');
+        	CleverTap.pushInboxNotificationClickedEventForId('Message Id');		
 
 		//Get CleverTap Id
 		CleverTap.profileGetCleverTapID((err, res) => {
-            console.log('CleverTapID', res, err);
-        });
+           		 console.log('CleverTapID', res, err);
+        	});
 
 		// Enable Personalization
 		CleverTap.enablePersonalization();
 
-        //Profile Property
-        CleverTap.profileGetProperty('Name', (err, res) => {
-            console.log('CleverTap Profile Name: ', res, err);
-            });
+		//Profile Property
+		CleverTap.profileGetProperty('Name', (err, res) => {
+		    console.log('CleverTap Profile Name: ', res, err);
+		 });
 
 
 
 		//Default Instance
 		CleverTap.profileGetCleverTapAttributionIdentifier((err, res) => {
-            console.log('CleverTapAttributionIdentifier', res, err);
-        });
+            		console.log('CleverTapAttributionIdentifier', res, err);
+       		 });
 		
 		//Get Display Unit For ID
 		CleverTap.getDisplayUnitForId('Unit Id', (err, res) => {
-             console.log('Get Display Unit for Id:', res, err);
-        });
+            	 console.log('Get Display Unit for Id:', res, err);
+      		  });
 		
 		//Get ALL Display Units
 		CleverTap.getAllDisplayUnits((err, res) => {
-             console.log('All Display Units: ', res, err);
-        });
+             		console.log('All Display Units: ', res, err);
+        	});
 		
 		//Product config:
 		CleverTap.setDefaultsMap({'text_color': 'red', 'msg_count': 100, 'price': 100.50, 'is_shown': true, 'json': '{"key":"val"}'});
