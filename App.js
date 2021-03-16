@@ -127,43 +127,43 @@ export default class App extends React.Component {
 			 });
 		//Get inbox Id
 		CleverTap.getInboxMessageForId('Message Id',(err, res) => {
-            console.log("marking message read = "+res);
-        });
+            		console.log("marking message read = "+res);
+        	});
 
-        CleverTap.deleteInboxMessageForId('Message Id');
-        CleverTap.markReadInboxMessageForId('Message Id');
-        CleverTap.pushInboxNotificationViewedEventForId('Message Id');
-        CleverTap.pushInboxNotificationClickedEventForId('Message Id');		
+        	CleverTap.deleteInboxMessageForId('Message Id');
+        	CleverTap.markReadInboxMessageForId('Message Id');
+        	CleverTap.pushInboxNotificationViewedEventForId('Message Id');
+        	CleverTap.pushInboxNotificationClickedEventForId('Message Id');		
 
 		//Get CleverTap Id
 		CleverTap.profileGetCleverTapID((err, res) => {
-            console.log('CleverTapID', res, err);
-        });
+           		 console.log('CleverTapID', res, err);
+        	});
 
 		// Enable Personalization
 		CleverTap.enablePersonalization();
 
-        //Profile Property
-        CleverTap.profileGetProperty('Name', (err, res) => {
-            console.log('CleverTap Profile Name: ', res, err);
-            });
+		//Profile Property
+		CleverTap.profileGetProperty('Name', (err, res) => {
+		    console.log('CleverTap Profile Name: ', res, err);
+		 });
 
 
 
 		//Default Instance
 		CleverTap.profileGetCleverTapAttributionIdentifier((err, res) => {
-            console.log('CleverTapAttributionIdentifier', res, err);
-        });
+            		console.log('CleverTapAttributionIdentifier', res, err);
+       		 });
 		
 		//Get Display Unit For ID
 		CleverTap.getDisplayUnitForId('Unit Id', (err, res) => {
-             console.log('Get Display Unit for Id:', res, err);
-        });
+            	 console.log('Get Display Unit for Id:', res, err);
+      		  });
 		
 		//Get ALL Display Units
 		CleverTap.getAllDisplayUnits((err, res) => {
-             console.log('All Display Units: ', res, err);
-        });
+             		console.log('All Display Units: ', res, err);
+        	});
 		
 		//Product config:
 		CleverTap.setDefaultsMap({'text_color': 'red', 'msg_count': 100, 'price': 100.50, 'is_shown': true, 'json': '{"key":"val"}'});
