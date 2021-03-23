@@ -41,7 +41,7 @@ export default class App extends React.Component {
 		CleverTap.addListener(CleverTap.CleverTapProfileSync, (event) => { this._handleCleverTapEvent(CleverTap.CleverTapProfileSync, event); });
 		
      
-		CleverTap.setDebugLevel(10);
+		CleverTap.setDebugLevel(3);
 		
 		//Setting up a Push Notification
 		//CleverTap.setPushToken("", CleverTap.FCM);
@@ -187,36 +187,36 @@ export default class App extends React.Component {
 		CleverTap.setMinimumFetchIntervalInSeconds(60);
 		
 		//get Last Fetch TimeStamp In Milliseconds
-		 CleverTap.getLastFetchTimeStampInMillis((err, res) => {
-               console.log('LastFetchTimeStampInMillis in string: ', res, err);
-          });
+		CleverTap.getLastFetchTimeStampInMillis((err, res) => {
+               		console.log('LastFetchTimeStampInMillis in string: ', res, err);
+         	});
 		  
 		//Product configs
 		//String
 		CleverTap.getProductConfigString('text_color', (err, res) => {
-              console.log('PC text_color val in string :', res, err);
-         });
+              		console.log('PC text_color val in string :', res, err);
+         	});
 		CleverTap.getProductConfigString('json', (err, res) => {
-              console.log('PC json val in string :', res, err);
-         });
+		      console.log('PC json val in string :', res, err);
+		 });
 		
 		//Boolean
 		CleverTap.getProductConfigBoolean('is_shown', (err, res) => {
-              console.log('PC is_shown val in boolean :', res, err);
-         });
-		
+		      console.log('PC is_shown val in boolean :', res, err);
+		 });
+
 		//Number
 		CleverTap.getNumber('msg_count', (err, res) => {
-              console.log('PC msg_count val in number :', res, err);
-         });
+		      console.log('PC msg_count val in number :', res, err);
+		 });
 		CleverTap.getNumber('price', (err, res) => {
-              console.log('PC price val in number :', res, err);
-         });
+		      console.log('PC price val in number :', res, err);
+		 });
 
-        //Feature flag
-        CleverTap.getFeatureFlag('is_dark_mode', false, (err, res) => {
-                      console.log('FF is_dark_mode val in boolean :', res, err);
-             });
+		//Feature flag
+		CleverTap.getFeatureFlag('is_dark_mode', false, (err, res) => {
+			      console.log('FF is_dark_mode val in boolean :', res, err);
+		     });
 
 		
 	}
