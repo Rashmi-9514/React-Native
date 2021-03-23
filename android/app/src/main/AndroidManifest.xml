@@ -28,6 +28,12 @@
         <meta-data android:name="CLEVERTAP_TOKEN" android:value="452-2bb" />
         <meta-data android:name="CLEVERTAP_REGION" android:value=" " />
         <receiver android:enabled="true" android:exported="false" android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver" />
+		<service
+		android:name="com.clevertap.android.sdk.FcmTokenListenerService">
+		<intent-filter>
+			<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+		</intent-filter>
+		</service>
 		<service android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
